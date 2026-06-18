@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question For You 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicToggle" title="Toggle Music">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Animated Hearts Background -->
+        <div class="hearts-background"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Animated Title -->
+            <h1 class="title">
+                <span class="letter">I</span>
+                <span class="letter">h</span>
+                <span class="letter">a</span>
+                <span class="letter">v</span>
+                <span class="letter">e</span>
+                <span class="letter">a</span>
+                <span class="letter">s</span>
+                <span class="letter">p</span>
+                <span class="letter">e</span>
+                <span class="letter">c</span>
+                <span class="letter">i</span>
+                <span class="letter">a</span>
+                <span class="letter">l</span>
+                <span class="letter">q</span>
+                <span class="letter">u</span>
+                <span class="letter">e</span>
+                <span class="letter">s</span>
+                <span class="letter">t</span>
+                <span class="letter">i</span>
+                <span class="letter">o</span>
+                <span class="letter">n</span>
+            </h1>
+
+            <!-- Photo Gallery Section -->
+            <div class="gallery-section">
+                <h2>Our Beautiful Memories 📸</h2>
+                <div class="gallery-container" id="galleryContainer">
+                    <div class="placeholder-photo">
+                        <i class="fas fa-images"></i>
+                        <p>Upload photos to display here</p>
+                    </div>
+                </div>
+                <div class="gallery-controls">
+                    <button class="btn-control" id="prevBtn" onclick="previousPhoto()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn-control" id="nextBtn" onclick="nextPhoto()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- The Question -->
+            <div class="question-box">
+                <p class="question-text">Will you marry me?</p>
+                <p class="heart-emoji">💍</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-container">
+                <button class="btn btn-yes" onclick="handleYes()">
+                    <i class="fas fa-heart"></i> Yes, I will! 💕
+                </button>
+                <button class="btn btn-no" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">
+                    No
+                </button>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <h2>🎉 She Said YES! 🎉</h2>
+                <p>You're the happiest person in the world!</p>
+            </div>
+        </div>
+
+        <!-- Photo Upload Section -->
+        <div class="upload-section">
+            <div class="upload-box">
+                <h3>📷 Add Your Photos (Like a Library)</h3>
+                <input type="file" id="photoInput" accept="image/*" multiple>
+                <label for="photoInput" class="upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    Click to upload photos
+                </label>
+                <div class="uploaded-info" id="uploadedInfo">
+                    <p id="photoCount">0 photos uploaded</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
